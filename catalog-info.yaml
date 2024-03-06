@@ -1,0 +1,33 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "awsApp06"
+  description: "awsApp06"
+
+  links:
+    - url: https://github.com/RohanAwasthi/awsApp06
+      title: "awsApp06"
+      icon: code
+
+  labels:
+    system: web-apps
+    environmentname: my-python-env-1101
+
+  tags:
+    - python
+    - aws
+    - "applicationtype-webapplication"
+
+  annotations:
+    # add elastic beanstalk annotation
+    jenkins.io/github-folder: 'custom-actions/tf-awsApp06'
+    github.com/project-slug: RohanAwasthi/awsApp06
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/linguist: https://github.com/ItRachii/ebs-sample-python-application
+    sonarqube.org/project-key: 'python-app/aws-elb-python'
+
+spec:
+  type: service
+  lifecycle: experimental
+  system: elasticbeanstalk
+  owner: "neelesh.shekhar"
